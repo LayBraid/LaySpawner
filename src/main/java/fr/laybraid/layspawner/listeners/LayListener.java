@@ -26,10 +26,9 @@ public class LayListener implements Listener {
         meta.setBlockState(css);
         spawner_to_give.setItemMeta(meta);
 
-        int random = new Random().nextInt(3);
-        e.getBreaker().sendMessage("Random: " + random);
-        if(random == 0){
-            e.getBreaker().sendMessage(ChatColor.GRAY + "You have silk touched a spawner");
+        int random = new Random().nextInt(2);
+        if(random == 1){
+            e.getBreaker().sendMessage(ChatColor.GRAY + "Vous avez récupéré ce spawner, bravo !");
             e.getBreaker().getInventory().addItem(spawner_to_give);
         }
     }
